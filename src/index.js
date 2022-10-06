@@ -2,9 +2,13 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
-import App from './App';
+import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import FilmPage from './pages/FilmPage';
+import Watchlist from './pages/Watchlist';
+import WatchlistFilm from './pages/WatchlistFilm';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -12,7 +16,14 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <Router>
+        <Routes>
+          <Route path='/' element={<App />} />
+          <Route path='/film/:id' element={<FilmPage />} />
+          <Route path='/watchlist' element={<Watchlist />} />
+          <Route path='/watchlist/:id' element={<WatchlistFilm />} />
+        </Routes>
+      </Router>
     </Provider>
   </React.StrictMode>
 );

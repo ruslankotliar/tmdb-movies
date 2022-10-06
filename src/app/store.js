@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import filmsReducer from '../features/films/filmsSlice';
+import watchlistReducer from '../features/watchlist/watchlistSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    films: filmsReducer,
+    watchlist: watchlistReducer
   },
 });

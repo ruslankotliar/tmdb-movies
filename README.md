@@ -1,4 +1,7 @@
-# Getting Started with Create React App and Redux
+# I have no intention *(at the moment)* of creating an awesome README file. Hence I leave it as it is by default.
+## The main idea is just to showcase my project. Hope you'll find it exciting! :)
+---
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
